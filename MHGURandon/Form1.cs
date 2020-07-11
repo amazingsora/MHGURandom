@@ -5,13 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MHGURandon
 {
     public partial class Form1 : Form
-    {/*
+    {
+        int p = 1;
+        
+        /*
       catcheckbox 1有 0沒有
       */
         int catcheckbox = 1;
@@ -112,6 +116,41 @@ namespace MHGURandon
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void random4_Click(object sender, EventArgs e)
+        {
+            listBox.Items.Clear();
+            for (int ii = 0; ii < 4; ii++) {
+                int ms = 30;
+                Random r = new Random();
+                int i1;
+                if (catcheckbox == 1) i1 = r.Next(0, 15);
+                else i1 = r.Next(0, 14);
+
+                int i2 = r.Next(0, 6);
+
+                if (i1 == 14)i2 = 6;
+    
+                if (i1 < 14)
+                {
+                    listBox.Items.Add("P" + p + "請用:" + styleName[i2] + "X" + weapons[i1].Name);
+                }
+                else if (i1 == 14)
+                {
+                    listBox.Items.Add("P" + p + "請用: 獵喵");
+
+                }
+                p++;
+                if (p == 5)
+                {
+                    p = 1;
+                }
+                Thread.Sleep(ms += ms);
+
+
+            }
 
         }
     }

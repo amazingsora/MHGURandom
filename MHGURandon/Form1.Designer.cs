@@ -50,6 +50,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Catlabel = new System.Windows.Forms.Label();
+            this.random4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -280,11 +281,25 @@
             this.Catlabel.Text = "不要獵喵";
             this.Catlabel.Click += new System.EventHandler(this.Catlabel_Click);
             // 
+            // random4
+            // 
+            this.random4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.random4.Font = new System.Drawing.Font("微軟正黑體", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.random4.ForeColor = System.Drawing.Color.White;
+            this.random4.Location = new System.Drawing.Point(416, 429);
+            this.random4.Name = "random4";
+            this.random4.Size = new System.Drawing.Size(166, 55);
+            this.random4.TabIndex = 10;
+            this.random4.Text = "一次抽4個";
+            this.random4.UseVisualStyleBackColor = false;
+            this.random4.Click += new System.EventHandler(this.random4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 496);
+            this.Controls.Add(this.random4);
             this.Controls.Add(this.Catlabel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.clear);
@@ -339,6 +354,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label Catlabel;
         private System.Windows.Forms.Label catmessage;
+        private System.Windows.Forms.Button random4;
     }
 }
 
