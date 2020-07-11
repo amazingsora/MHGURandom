@@ -213,6 +213,16 @@ namespace MHGURandon.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap _014no {
+            get {
+                object obj = ResourceManager.GetObject("014no", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap Magala {
             get {
                 object obj = ResourceManager.GetObject("Magala", resourceCulture);

@@ -35,26 +35,31 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.stylenamelabel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.weponnamelabel = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.weaponBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.catmessage = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listBox = new System.Windows.Forms.ListBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.weaponBox = new System.Windows.Forms.PictureBox();
+            this.clear = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Catlabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.weaponBox)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weaponBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,6 +130,14 @@
             this.stylenamelabel.TabIndex = 0;
             this.stylenamelabel.Text = "抽選風格";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 111);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.weponnamelabel);
@@ -137,11 +150,11 @@
             // 
             this.weponnamelabel.AutoSize = true;
             this.weponnamelabel.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.weponnamelabel.Location = new System.Drawing.Point(74, 22);
+            this.weponnamelabel.Location = new System.Drawing.Point(23, 22);
             this.weponnamelabel.Name = "weponnamelabel";
-            this.weponnamelabel.Size = new System.Drawing.Size(123, 61);
+            this.weponnamelabel.Size = new System.Drawing.Size(219, 61);
             this.weponnamelabel.TabIndex = 0;
-            this.weponnamelabel.Text = "武器";
+            this.weponnamelabel.Text = "抽選武器";
             // 
             // panel5
             // 
@@ -150,6 +163,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(262, 111);
             this.panel5.TabIndex = 4;
+            // 
+            // weaponBox
+            // 
+            this.weaponBox.Image = ((System.Drawing.Image)(resources.GetObject("weaponBox.Image")));
+            this.weaponBox.Location = new System.Drawing.Point(85, 0);
+            this.weaponBox.Name = "weaponBox";
+            this.weaponBox.Size = new System.Drawing.Size(105, 111);
+            this.weaponBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.weaponBox.TabIndex = 1;
+            this.weaponBox.TabStop = false;
             // 
             // tableLayoutPanel2
             // 
@@ -168,17 +191,29 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.catmessage);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(194, 73);
             this.panel3.TabIndex = 0;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // catmessage
+            // 
+            this.catmessage.AutoSize = true;
+            this.catmessage.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.catmessage.ForeColor = System.Drawing.Color.Red;
+            this.catmessage.Location = new System.Drawing.Point(38, 40);
+            this.catmessage.Name = "catmessage";
+            this.catmessage.Size = new System.Drawing.Size(0, 26);
+            this.catmessage.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(36, 26);
+            this.label5.Location = new System.Drawing.Point(37, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 35);
             this.label5.TabIndex = 1;
@@ -187,9 +222,9 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.listBox);
-            this.panel4.Location = new System.Drawing.Point(3, 82);
+            this.panel4.Location = new System.Drawing.Point(3, 83);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(194, 306);
+            this.panel4.Size = new System.Drawing.Size(194, 305);
             this.panel4.TabIndex = 1;
             // 
             // listBox
@@ -200,26 +235,29 @@
             this.listBox.ItemHeight = 17;
             this.listBox.Location = new System.Drawing.Point(0, 0);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(194, 306);
+            this.listBox.Size = new System.Drawing.Size(194, 305);
             this.listBox.TabIndex = 0;
             // 
-            // pictureBox2
+            // clear
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 111);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.clear.Location = new System.Drawing.Point(689, 406);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(99, 30);
+            this.clear.TabIndex = 6;
+            this.clear.Text = "清除紀錄";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
-            // weaponBox
+            // pictureBox3
             // 
-            this.weaponBox.Image = ((System.Drawing.Image)(resources.GetObject("weaponBox.Image")));
-            this.weaponBox.Location = new System.Drawing.Point(85, 0);
-            this.weaponBox.Name = "weaponBox";
-            this.weaponBox.Size = new System.Drawing.Size(105, 111);
-            this.weaponBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.weaponBox.TabIndex = 1;
-            this.weaponBox.TabStop = false;
+            this.pictureBox3.Image = global::MHGURandon.Properties.Resources._014no;
+            this.pictureBox3.Location = new System.Drawing.Point(40, 348);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 49);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox1
             // 
@@ -231,11 +269,25 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // Catlabel
+            // 
+            this.Catlabel.AutoSize = true;
+            this.Catlabel.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Catlabel.Location = new System.Drawing.Point(97, 362);
+            this.Catlabel.Name = "Catlabel";
+            this.Catlabel.Size = new System.Drawing.Size(110, 31);
+            this.Catlabel.TabIndex = 8;
+            this.Catlabel.Text = "不要獵喵";
+            this.Catlabel.Click += new System.EventHandler(this.Catlabel_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 496);
+            this.Controls.Add(this.Catlabel);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.clear);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button1);
@@ -244,19 +296,20 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "MHGU武器抽選";
+            this.Text = "MHGU風格X武器抽選";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.weaponBox)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.weaponBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -282,6 +335,10 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label Catlabel;
+        private System.Windows.Forms.Label catmessage;
     }
 }
 

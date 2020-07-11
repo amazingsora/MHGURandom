@@ -11,7 +11,10 @@ using System.Windows.Forms;
 namespace MHGURandon
 {
     public partial class Form1 : Form
-    {
+    {/*
+      catcheckbox 1有 0沒有
+      */
+        int catcheckbox = 1;
         int index = 0;
         string[] styleName ;
         Weapon[] weapons;
@@ -51,7 +54,10 @@ namespace MHGURandon
         {
             index++;
             Random r = new Random();
-            int i1 = r.Next(0, 15);
+            int i1;
+            if (catcheckbox == 1) i1 = r.Next(0, 15);
+            else i1 = r.Next(0, 14);
+
             int i2 = r.Next(0,6);
           
             if (i1 == 14) {
@@ -69,6 +75,44 @@ namespace MHGURandon
                 listBox.Items.Add("第" + index + "次結果: 獵喵");
 
             }
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            listBox.Items.Clear();
+        }
+
+       
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+
+
+
+            if (catcheckbox == 0)
+            {
+                catcheckbox++;
+                pictureBox3.Image = Properties.Resources._014no;
+                Catlabel.Text = "不要獵喵";
+                catmessage.Text = "";
+
+            }
+            else if(catcheckbox==1){
+                catcheckbox = 0;
+                pictureBox3.Image = Properties.Resources._014;
+                Catlabel.Text = "加入獵喵";
+                catmessage.Text = "已移除獵喵";
+            }
+        }
+
+        private void Catlabel_Click(object sender, EventArgs e)
+        {
+            pictureBox3_Click( sender, e);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
